@@ -1,10 +1,7 @@
 #include "File.h"
 
-// Constructor
-File::File(const string& n, const string& ext) {
-    name = n;
-    extension = ext;
-}
+File::File(const string& name, const string& extension)
+    : name(name), extension(extension) {}
 
 string File::getName() const {
     return name;
@@ -12,4 +9,8 @@ string File::getName() const {
 
 string File::getExtension() const {
     return extension;
+}
+
+string File::getFullName() const {
+    return name + "." + extension;
 }

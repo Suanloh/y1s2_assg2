@@ -1,7 +1,8 @@
 #include <iostream>
+#include <vector>
+#include <string>
 #include "File.h"
 #include "Folder.h"
-
 using namespace std;
 
 int main() {

@@ -8,11 +8,13 @@ class File {
 private:
     string name;
     string extension;
+
 public:
     File(const string& name, const string& extension);
+
     string getName() const;
     string getExtension() const;
-
+    string getFullName() const; // returns "name.extension"
 };
 
 #endif
