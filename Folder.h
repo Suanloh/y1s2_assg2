@@ -14,33 +14,33 @@ class Folder {
         vector<File*> files;
     public:
         // Constructor / Destructor
-    Folder(const string& name, Folder* parent = nullptr);
-    ~Folder(); // calls recursive cleanup internally
- 
-    // Getters
-    string getName() const;
-    Folder* getParent() const;
-    vector<File>& getFiles();
-    vector<Folder*>& getSubfolders();
- 
-    // File management
-    void addFile(const File& file);
-    bool removeFile(const string& fullName); // e.g. "notes.pdf"
-    bool fileExists(const string& fullName) const;
- 
-    // Folder management
-    void addSubfolder(Folder* folder);
-    bool removeSublfolderByName(const string& folderName);
-    Folder* findSubfolder(const string& folderName) const;
+        Folder(const string& name, Folder* parent = nullptr);
+        ~Folder(); // calls recursive cleanup internally
+    
+        // Getters
+        string getName() const;
+        Folder* getParent() const;
+        vector<File>& getFiles();
+        vector<Folder*>& getSubfolders();
+    
+        // File management
+        void addFile(const File& file);
+        bool removeFile(const string& fullName); // e.g. "notes.pdf"
+        bool fileExists(const string& fullName) const;
+    
+        // Folder management
+        void addSubfolder(Folder* folder);
+        bool removeSublfolderByName(const string& folderName);
+        Folder* findSubfolder(const string& folderName) const;
 
 
-void displayTree(const string& prefix = "") const;
+        void displayTree(const string& prefix = "") const;
 
-void searchFile(const string& fullName, const string& current Path, vector<string>& results) const;
+        void searchFile(const string& fullName, const string& current Path, vector<string>& results) const;
 
-void recursiveDelete();
+        void recursiveDelete();
 
-string getPath() const;
+        string getPath() const;
 
 };
 
